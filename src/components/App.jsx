@@ -6,6 +6,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   function addItem(inputText) {
+    if (inputText === "") return;
     setItems((prevItems) => {
       return [...prevItems, inputText];
     });
